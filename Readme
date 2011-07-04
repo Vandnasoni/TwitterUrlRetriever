@@ -1,0 +1,5 @@
+command for running the file:
+ruby find_links.rb a_hashtag
+
+command for running test cases:
+rspec extract_urls_spec.rb
