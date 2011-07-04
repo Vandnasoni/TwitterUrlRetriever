@@ -11,9 +11,9 @@ class ExtractUrl
     @urls=[]
     for tweet in tweets
       url=URI.extract(tweet.text)
-       url.each do |str|
-          @urls << str if str.start_with?("http"||"https")
-        end if !url.nil? and !url.empty?
+      url.each do |str|
+        @urls << str if str.start_with?("http"||"https")
+      end if !url.nil? and !url.empty?
     end
     @urls=@urls.uniq
   end
