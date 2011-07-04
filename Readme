@@ -1,5 +1,10 @@
-command for running the file:
-ruby find_links.rb a_hashtag
+Steps to run the Twitter Project/Case Study:
+Pull the code from Github
+Go to the application directory 
+execute : ruby find_links.rb a_hashtag
 
-command for running test cases:
-rspec extract_urls_spec.rb
+To run the test cases: rspec extract_urls_spec.rb
+
+list of gems required:
+twitter
+rspec
