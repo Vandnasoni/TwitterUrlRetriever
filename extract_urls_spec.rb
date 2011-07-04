@@ -16,7 +16,7 @@ describe "ExtractUrl" do
   end
   it "should contain hashtag and return an array" do
     @search.hashtag('ruby').query[:q].should include '#ruby'
-    results=@extract_url.find_tweets_by_hashtag('ruby',5)
+    results=@extract_url.fetch_tweets_by_hashtag('ruby',5)
     results.count.should == 5
     results.class.should == Array
   end
@@ -27,7 +27,7 @@ describe "ExtractUrl" do
   end
 
   it "should parse the given array to extract links and return array of unique links starting with http or https" do
-    tweets=@extract_url.find_tweets_by_hashtag('ruby',5)
+    tweets=@extract_url.fetch_tweets_by_hashtag('ruby',5)
     urls=@extract_url.find_links_by_tweets(tweets)
     urls.class.should == Array
     urls.count.should == urls.uniq.count

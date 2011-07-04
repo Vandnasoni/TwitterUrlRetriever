@@ -14,7 +14,7 @@ else
     puts "showing results for first hashtag only"
   end
   arg=ARGV[0]
-  result=@extract_url.find_tweets_by_hashtag(arg,100)
+  result=@extract_url.fetch_tweets_by_hashtag(arg,100)
   urls=@extract_url.find_links_by_tweets(result)
   print_array(urls)
 end
